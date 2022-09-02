@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=Bebas+Neue&family=Courier+Prime&family=Cutive&family=IM+Fell+DW+Pica+SC&family=JetBrains+Mono:wght@100;500&family=Josefin+Sans:wght@600&family=Kumbh+Sans:wght@200;700&family=Mohave&family=Mukta:wght@300&family=Nanum+Gothic&family=Nunito+Sans:ital,wght@0,300;0,400;1,400&family=PT+Serif&family=Poppins:wght@300;400;500;700&family=Quicksand:wght@300&family=Roboto+Mono:wght@200;500&family=Schoolbell&family=Silkscreen&display=swap');
+#root{
+    --scissors:hsl(39, 89%, 49%);
+    --papper:hsl(230, 89%, 62%);
+    --rock:hsl(349, 71%, 52%);
+    --rock2:hsl(349, 70%, 56%);
+    --lizard:hsl(261, 73%, 60%);
+    --cyan:hsl(189, 59%, 53%) to hsl(189, 58%, 57%);
+    --dark:hsl(229, 25%, 31%);
+    --score:hsl(229, 64%, 46%);
+    --header:hsl(217, 16%, 45%);
+    --background:hsl(214, 47%, 23%) to hsl(237, 49%, 15%);
+    --red:rgb(244, 105, 105);
+    width: 100vw;
+    height: 100vh;
+}
+
+#id-container{
+  font-family: 'Barlow Semi Condensed';
+  font-weight: 700;
+}
+
+html{
+  background:linear-gradient(hsl(214, 47%, 23%),hsl(237, 49%, 15%)); 
+}
