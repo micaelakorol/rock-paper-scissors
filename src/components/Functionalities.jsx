@@ -60,14 +60,14 @@ const Functionalities = () => {
         if(score === 5){
             alert('Ganaste!')
                 setScore(0)
-                    setScoreIA();
+                    setScoreIA(0);
                         }}
 winner()
   //funcion perdedora:  
     const loser = () => {
      if(scoreIA === 5){
         alert('Perdiste :(')
-            setScoreIA()
+            setScoreIA(0)
                 setScore(0)
                     }}
 loser()
