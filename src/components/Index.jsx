@@ -8,7 +8,7 @@ import logo from '../images/logo.svg'
 const Index = ({score,selectIA,user,scoreIA,result}) => {
 
   return (
-  <div id='id-container'>
+  <main id='id-container'>
     <section className='container-score'>
       <img src={logo} alt="" className='img'/>
   {/* ---------------------Tabla de puntaje jugador-------------------------------------*/}
@@ -38,7 +38,7 @@ const Index = ({score,selectIA,user,scoreIA,result}) => {
     <button onClick={() => user(1)} className='btn-2'><img src={paper} alt="" /></button>
       <button onClick={() => user(2)} className='btn-3'><img src={scissors} alt="" /></button>
         </div>
-          </div>
+          </main>
   )
 }
 
