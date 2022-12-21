@@ -2,6 +2,7 @@
     margin:0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 #id-container{
@@ -18,7 +19,6 @@
 .container-score{
     width: 50%;
     margin-top: 2rem;
-    min-height: 110px;
     border: 3px solid #fff;
     padding: 0.6rem;
     border-radius: 1rem;
@@ -28,14 +28,15 @@
 .container-score img{
     height: auto;
     object-fit: contain;
+    width: 110px;
 }
 .container-score .table-score{
     width: 103px;
     height: auto;
-    margin:0.4rem;
+    margin:0.2rem;
     background-color: #fff;
     border-radius: 0.4rem;
-    padding: 0.7rem 1.5rem;
+    padding: 0.3rem 1rem;
     text-align: center;
     overflow-y: hidden;
 }
@@ -55,7 +56,7 @@
 
 .section-game{
  width: 90%;
- height: auto;
+ overflow-y: hidden;
  text-align: center;
 }
 
@@ -107,17 +108,18 @@
    background-color: var(--red); 
 }
 
-@media (max-width:730px){
+@media (max-width:780px){
     .container-score{
-        width: 100%;
+        width: 80%;
     }
 }
-@media (max-width:410px){
+@media (max-width:480px){
     .img{
         display: none;
     }
     .container-score .table-score{
         padding: 4px;
+        height: 100px;
     }
     .container-score{
         min-height: 140px;
