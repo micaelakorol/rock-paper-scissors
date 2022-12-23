@@ -1,15 +1,15 @@
 import React from "react";
 import { useState } from "react";
 import Index from "./Index";
+import { useEffect } from "react";
 
 const Functionalities = () => {
+
   let [score, setScore] = useState(0);
   let [selectIA, setSelectIA] = useState();
   let [result, setResult] = useState("");
   let [scoreIA, setScoreIA] = useState(0);
 
-  //opciones:
-  let options = [0, 1, 2];
   //seleccion de la maquina
   var selectionIA = null;
 
@@ -19,39 +19,39 @@ const Functionalities = () => {
     setSelectIA(selectionIA);
 
     //si elijo piedra:
-    if (electionUser === 0 && options[selectionIA] === 0) {
+    if (electionUser === 0 && selectionIA === 0) {
       setResult("Tied");
     }
-    if (electionUser === 0 && options[selectionIA] === 1) {
+    if (electionUser === 0 && selectionIA === 1) {
       setResult("Oops..");
       setScoreIA(scoreIA + 1);
     }
-    if (electionUser === 0 && options[selectionIA] === 2) {
+    if (electionUser === 0 && selectionIA === 2) {
       setResult("+1 point");
       setScore(score + 1);
     }
     //Si elijo papel:
-    if (electionUser === 1 && options[selectionIA] === 0) {
+    if (electionUser === 1 && selectionIA === 0) {
       setResult("+1 point");
       setScore(score + 1);
     }
-    if (electionUser === 1 && options[selectionIA] === 1) {
+    if (electionUser === 1 && selectionIA === 1) {
       setResult("Tied");
     }
-    if (electionUser === 1 && options[selectionIA] === 2) {
+    if (electionUser === 1 && selectionIA === 2) {
       setResult("Oops..");
       setScoreIA(scoreIA + 1);
     }
     //si elijo tijera:
-    if (electionUser === 2 && options[selectionIA] === 0) {
+    if (electionUser === 2 && selectionIA === 0) {
       setResult("Oops..");
       setScoreIA(scoreIA + 1);
     }
-    if (electionUser === 2 && options[selectionIA] === 1) {
+    if (electionUser === 2 && selectionIA === 1) {
       setResult("+1 point");
       setScore(score + 1);
     }
-    if (electionUser === 2 && options[selectionIA] === 2) {
+    if (electionUser === 2 && selectionIA === 2) {
       setResult("Tied");
     }
   };
@@ -70,7 +70,6 @@ const Functionalities = () => {
       setScoreIA(0);
     }
   };
-  winner();
   //funcion perdedora:
   const loser = () => {
     if (scoreIA === 5) {
@@ -79,7 +78,17 @@ const Functionalities = () => {
       setScore(0);
     }
   };
-  loser();
+
+  useEffect(() => {
+    if (scoreIA === 5) {
+      loser();
+    }
+    if (score === 5) {
+      winner();
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [scoreIA, score]);
+
   return (
     <div>
       <Index

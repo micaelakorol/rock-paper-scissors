@@ -1,6 +1,6 @@
-Inspirado en el popular juego 'piedra,papel,tijera'
+Juego 'Piedra, papel o tijera'
 
-Permite dos jugadores: Siri(máquina) y Tú.
-El que llega a 4 puntos , gana el juego!
+Permite dos jugadores: * Siri(máquina) y * Tú.
+El que suma 4 puntos , gana el juego!
 
-Desarrollado con: CSS3, React, Javascript
+Desarrollado con: CSS3, JSX, React, Javascript.
